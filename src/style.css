@@ -1,0 +1,65 @@
+body {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  color: #17223C;
+}
+
+h1 {
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: 600;
+  color: #17223C;
+}
+
+.remark-slide-content .big-one{
+  font-size: 80px;
+  line-height: 1.5;
+}
+
+.remark-slide-content .massive-one{
+  font-size: 150px;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: #17223c; 
+}
+
+.remark-code, .remark-inline-code {
+  font-family: 'Ubuntu Mono';
+  font-size: 25px;
+  line-height: 1.2em;
+}
+
+.pink {
+  background-color: #F49BC2;
+  display: inline;
+}
+
+.purple {
+  background-color: #caa9fa;
+  display: inline;
+}
+
+.citation {
+  background-color: #F49BC2;
+  display: inline;
+  position: absolute;
+  bottom: 2em;
+  left: 2em;
+}
+
+.align-right {
+  float: right;
+}
+
+.align-left {
+  float: left;
+}
+
+.quote {
+  line-height: 1.1;
+}

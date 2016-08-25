@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BrazilJS 2016, Cellular Automata</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+    </style>
+    <link rel="stylesheet" href="./src/style.css"/>
+  </head>
+  <body>
+    <textarea id="source">
+      background-image: url(./src/images/space.jpg)
+      background-size: cover
+      class: center, middle
+
+      #  .big-one[.pink[JAVASCRIPT TAKES ON GENETICALLY EVOLVING CELLULAR AUTOMATA]]
+
+      #### .pink[i.e. "hot take on cellular automata"]
+
+      ---
+      class: center, middle
+
+      # .big-one[![wave](./src/images/wave.png) &nbsp &nbsp &nbsp  Porto Alegre!]
+      ### (&nbsp &nbsp)
+
+      ---
+      class: center, middle
+
+      # .big-one[![sassyLady](./src/images/sassyLady.png) I am .pink[[@_lrlna](https://twitter.com/lrlna)]]
+
+      ---
+      class: center, middle
+
+      #  .big-one[.pink[JAVASCRIPT TAKES ON GENETICALLY EVOLVING CELLULAR AUTOMATA]]
+
+      #### i.e. "hot take on cellular automata"
+
+      ---
+      background-image: url(./src/images/lost.gif)
+      background-size: cover
+
+      ---
+      background-image: url(./src/images/space.jpg)
+      background-size: cover
+
+      class: center, middle
+
+      # .big-one[.pink[Story time]]
+
+      ---
+      background-image: url(./src/images/rain.gif)
+      background-size: cover
+
+      class: center, bottom
+
+      # It rains
+      --
+        .pink[*a lot*]
+
+      ---
+      class: middle
+
+      ### .pink[Melanie Mitchell, _Complexity: A Guided Tour_]
+
+      ![complexityAGuidedTour](./src/images/complexityAGuidedTour.gif)
+
+      ???
+      cellular automata: a descrete model in computations/math.
+
+      ---
+      background-image: url(./src/images/keyboard.gif)
+      background-size: cover
+
+      class: center, bottom
+
+      # .pink[so I got coding]
+
+      ---
+      background-image: url(./src/images/rule110.gif)
+      background-size: cover
+
+      .citation[lrlna.github.io/cellular-automata]
+
+      ---
+      background-image: url(./src/images/excited-baby.gif)
+      background-size: cover
+
+      ---
+      background-image: url(./src/images/space.jpg)
+      background-size: cover
+
+      class: center, middle
+
+      # .pink[Let's talk cellular automata]
+
+      ---
+      class: center, middle
+
+      # .pink[John Von Neumann]
+
+      ---
+      class: middle
+
+      # .pink[2 kinds of Automata]:
+
+      .citation[John Von Neumann, _Theory of Self-Reproducing Automata, http://cba.mit.edu/events/03.11.ASE/docs/VonNeumann.pdf_]
+      --
+      <br/>
+      ## ![robot](./src/images/robot.png) Artificial => e.g. computers
+      --
+      <br/>
+      ## ![shell](./src/images/shell.png) Natural &nbsp => e.g. seashells &nbsp&nbsp&nbsp&nbsp 
+
+
+      ???
+      i.e. Conus/Cymbiola shells 
+
+      ---
+      class: middle
+
+      # .pink[2 kinds of Automata]:
+      ## ![robot](./src/images/robot.png) .pink[Artificial => e.g. computers]
+      ## ![shell](./src/images/shell.png) Natural &nbsp => e.g. seashells &nbsp&nbsp&nbsp&nbsp 
+
+      .citation[John Von Neumann, _Theory of Self-Reproducing Automata, http://cba.mit.edu/events/03.11.ASE/docs/VonNeumann.pdf_]
+      ???
+      i.e. Conus/Cymbiola shells
+
+
+      ---
+      background-image: url(./src/images/space.jpg)
+      background-size: cover
+
+      class: center, middle
+
+      # .pink[What are their characteristics?]
+      # .pink[What are their traits?]
+
+      ???
+      Let's talk about traits! Rule definition, based on the rules, we create outcomes
+
+      ---
+      # 1. Result is dependant on part's definition
+
+      .citation[John Von Neumann, _Theory of Self-Reproducing Automata, http://cba.mit.edu/events/03.11.ASE/docs/VonNeumann.pdf_]
+
+      ???
+      All follow rulesss: OR trait #1
+      Results of the automata depen on how elementary parts are defined, i.e. the rules
+      --
+
+      # 2. Must have ![sparkles](./src/images/sparkles.png) awarness ![sparkles](./src/images/sparkles.png) of its parts
+
+      ???
+      Trait #2
+      Know all the things
+
+      --
+
+      # 3. Operations are not directed at themselves
+
+      ???
+      Trait #3
+      if operations are not directed at themselves, then we can deduce that the results produced are unlike their character
+
+      --
+      # 4. Decentralized
+
+      ---
+      background-image: url(./src/images/space.jpg)
+      background-size: cover
+
+      class: center, middle
+
+      # .pink[Produce a more complicated object from less complicated parts]
+
+      ---
+      background-image: url(./src/images/turingMachine.jpg)
+      background-size: cover
+
+      class: center, middle
+
+      # .big-one[.pink[Turing Machine]]
+
+      ???
+      one of the most basic ones: turing machine :wave:
+      want a turing machine picture, picture of turing
+
+      ---
+      background-image: url(./src/images/turingMachine.jpg)
+      background-size: cover
+
+      ---
+      background-image: url('./src/images/turingMachine.jpg')
+      background-size: cover
+
+      class: middle
+
+      # .pink[automaton => action]
+      --
+      <br/>
+      # .pink[tape &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp => product]
+      --
+      <br/>
+      #### .pink[=============================]
+      # .pink[different constructs]
+
+      ???
+      turing machine = infintite tape in both directions, a puncher to punch some holes based on conditions
+      automaton doesn't produce a medium at all, but instead modifies it.
+
+      ---
+      background-image: url('./src/images/mindBlown.gif')
+      background-size: cover
+
+      ---
+      background-image: url('./src/images/turingMachine.jpg')
+      background-size: cover
+
+      class: middle
+
+      # .pink[Computation emerges from rules being obeyed by each automaton]
+
+      ---
+      background-image: url(./src/images/space.jpg)
+      background-size: cover
+
+      class: center, middle
+
+      # .pink[Cellular Automata models a natural system]
+
+      .citation[John Von Neumann, _Theory of Self-Reproducing Automata, http://cba.mit.edu/events/03.11.ASE/docs/VonNeumann.pdf_]
+      ???
+      working as a decentralized, spatially extended systems
+      von neumann lectures --
+
+      ---
+      class: center, middle
+
+      # .pink[Remember trait 2: aka ![sparkles](./src/images/sparkles.png) awarness ![sparkles](./src/images/sparkles.png) ?]
+
+      ???
+      much like in life, a lot is dependent on how you work with your neighbours
+
+      ---
+      background-image: url(./src/images/space.jpg)
+      background-size: cover
+      class: center, middle
+
+      # .pink[Von Neumann's Automaton]
+      ---
+      class: center, middle
+
+      ### ![BulbOn](./src/images/bulb-on.png)&nbsp![BulbOff](./src/images/bulb-off.png)&nbsp![BulbOn](./src/images/bulb-on.png)&nbsp![BulbOn](./src/images/bulb-on.png)![BulbOn](./src/images/bulb-on.png)
+      ### ![BulbOFF](./src/images/bulb-off.png)&nbsp![BulbOff](./src/images/bulb-off.png)&nbsp![BulbOn](./src/images/bulb-on.png)&nbsp![BulbOn](./src/images/bulb-on.png)![BulbOff](./src/images/bulb-off.png)
+      ### ![BulbOn](./src/images/bulb-on.png)&nbsp![BulbOn](./src/images/bulb-on.png)&nbsp![BulbOn](./src/images/bulb-on.png)&nbsp![BulbOn](./src/images/bulb-on.png)![BulbOn](./src/images/bulb-on.png)
+      ### ![BulbOn](./src/images/bulb-on.png)&nbsp![BulbOn](./src/images/bulb-on.png)&nbsp![BulbOf](./src/images/bulb-off.png)&nbsp![BulbOff](./src/images/bulb-off.png)![BulbOn](./src/images/bulb-on.png)
+
+      ---
+      background-image: url(./src/images/space.jpg)
+      background-size: cover
+
+      class: center, middle
+
+      # .pink[Conway's Game of Life]
+
+      .citation[_Conway's Game of Life, https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life_]
+      ???
+      aka the most familiar example is conway's game of life
+
+      ---
+      class: center, middle
+
+      ######![koala](./src/images/koala.png)
+
+      ---
+      class: center, middle
+
+      ######![turtle](./src/images/turtle.png)&nbsp&nbsp&nbsp![turtle](./src/images/turtle.png)&nbsp&nbsp&nbsp![turtle](./src/images/turtle.png)
+      ######![turtle](./src/images/turtle.png)&nbsp&nbsp&nbsp![koala](./src/images/koala.png)&nbsp&nbsp&nbsp![turtle](./src/images/turtle.png)
+      ######![turtle](./src/images/turtle.png)&nbsp&nbsp&nbsp![turtle](./src/images/turtle.png)&nbsp&nbsp&nbsp![turtle](./src/images/turtle.png)
+
+      .citation[_Conway's Game of Life, https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life_]
+
+      ???
+      if you are a koala and have 3 turtles = become a turtle 
+      if turtle and 2 or 3 turtles = stay a turtle
+      if a turtle and there are less than 2 of you = become a koala 
+
+      ---
+      class: center, middle
+      # .pink[glider dot gif]
+      ![glider](./src/images/glider.gif)
+
+      .citation[_glider, http://www.conwaylife.com/wiki/Glider_]
+
+      ???
+      couple of images of this automata. life, pistols
+
+      ---
+      class: center, middle
+      # .pink[blaster dot gif]
+      ![blaster](./src/images/blaster.gif)
+
+      .citation[_blaster, https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#/media/File:Gospers_glider_gun.gif_]
+      ???
+      couple of images of this automata. life, pistols
+
+      ---
+      class: center, middle
+
+      # .pink[2 dimensional + binary]
+
+      ---
+      background-image: url(./src/images/space.jpg)
+      background-size: cover
+
+      class: center, middle
+
+      # .pink[Wolfram + Elementary Cellular Automata]
+
+      .citation[Stephen Wolfram, _Computational Theory of Cellular Automata _]
+
+      ---
+      class: center, middle
+
+      # .pink[1 dimensional + binary]
+
+      .citation[Stephen Wolfram, _Computational Theory of Cellular Automata _]
+
+      ---
+      class: center, middle
+
+      ######![koala](./src/images/koala.png)
+
+      ---
+      class: center, middle
+
+      ######![turtle](./src/images/turtle.png)&nbsp&nbsp&nbsp![koala](./src/images/koala.png)&nbsp&nbsp&nbsp![turtle](./src/images/turtle.png)
+
+      ---
+      background-image: url(./src/images/keyboard.gif)
+      background-size: cover
+
+      class: center, middle
+
+      # .pink[Let's take a look]
+
+      ---
+      # .pink[One dimensional lattice:]
+
+      .citation[Stephen Wolfram, _Computational Theory of Cellular Automata _]
+
+      ###&nbsp&nbsp&nbsp&nbsp&nbsp| ![turtle](./src/images/turtleSmall.png)&nbsp![koala](./src/images/koalaSmall.png)&nbsp&nbsp![koala](./src/images/koalaSmall.png)&nbsp&nbsp![turtle](./src/images/turtleSmall.png)&nbsp![turtle](./src/images/turtleSmall.png)![koala](./src/images/koalaSmall.png)
+
+      ---
+      # .pink[One dimensional lattice:]
+
+      ### &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp| ![turtle](./src/images/turtleSmall.png)&nbsp![koala](./src/images/koalaSmall.png)&nbsp&nbsp![koala](./src/images/koalaSmall.png)&nbsp&nbsp![turtle](./src/images/turtleSmall.png)&nbsp![turtle](./src/images/turtleSmall.png)![koala](./src/images/koalaSmall.png) ] *t*
+      ###t&nbsp&nbsp&nbsp&nbsp| &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp] *t+1*
+      ###i&nbsp&nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp] *t+2*
+      ###m&nbsp&nbsp| &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp] *t+3*
+      ###e&nbsp&nbsp&nbsp| &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp] *t+4*
+      ### &nbsp&nbsp&nbsp&nbsp&nbsp| &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp] *t+5*
+
+      ---
+      class: middle
+
+      # .pink[Look to your ![point_left](./src/images/point_left.png), look to your ![point_right](./src/images/point_right.png)]
+
+      ```javascript
+
+        [].forEach.call(parentCells, function(parentCell, index) {
+          var right = parentCell.nextElementSibling
+          var left = parentCell.previousElementSibling
+          rule110(parentCell, right, left, index)
+        })
+
+      ```
+      ???
+      get left right emoji
+
+      ---
+      class: middle
+      # .pink[follow site update rules]
+
+      ```javascript
+        // change based on (turtle) koala
+        if (leftTurtle && cellTurtle && rightTurtle) {
+          toggleClass(cells[currentIndex], "active", "inactive")
+        } else if (leftTurtle && !cellTurtle && rightTurtle) {
+          toggleClass(cells[currentIndex], "inactive", "active")
+        } else if (!leftTurtle && !cellTurtle && rightTurtle) {
+          toggleClass(cells[currentIndex], "inactive", "active")
+        }
+      ```
+
+      ???
+      ---
+      class: middle
+
+      ```javascript
+        // automata
+        [
+          // lattice
+          [
+            // cells
+            {
+              state: true,
+              leftNeighbour: true,
+              rightNeighbour: false
+            },
+            {
+              state: true,
+              leftNeighbour: true,
+              rightNeighbour: false
+            }
+            ...
+          ]
+          ...
+        ]
+      ```
+      ---
+      background-image: url(./src/images/rule110.gif)
+      background-size: cover
+
+      class: bottom
+
+      # .pink[wow, cool pattern ![sparkles](./src/images/sparkles.png)]
+      ---
+      class: middle
+
+      # .pink[Certain patterns will dominate]
+      --
+      <br/>
+      ## Pattern (*noun*): A set of configurations sharing a common spacial structure
+      .citation[James E. Hanson, James P. Crutchfield, _Computational Mechanics of Cellular Automata: an Example_]
+
+      ???
+      Crutchfield + Hanson in computational mechanics of CA
+
+      ---
+      class: middle
+      # .pink[Discovery:]
+      # Diversity of spatio-temporal behaviour where system organizes *itself* into patterns
+
+      .citation[James E. Hanson, James P. Crutchfield, _Computational Mechanics of Cellular Automata: an Example_]
+      ---
+      class: middle
+      # .pink[Discovery:]
+      # Diversity of spatio-temporal behaviour where system organizes ![sparkles](./src/images/sparkles.png)&nbsp*itself* &nbsp ![sparkles](./src/images/sparkles.png) into patterns
+
+      .citation[James E. Hanson, James P. Crutchfield, _Computational Mechanics of Cellular Automata: an Example_]
+
+      ---
+      background-image: url(./src/images/excited-baby.gif)
+      background-size: cover
+
+      ---
+      background-image: url(./src/images/space.jpg)
+      background-size: cover
+
+      class: center, middle
+
+      # .big-one[.pink[IT FROM BIT]]
+
+      ---
+      background-image: url(./src/images/space.jpg)
+      background-size: cover
+
+      class: middle
+
+      ### .pink[.quote[It from bit. Otherwise put, every 'it'—every particle, every field of force, even the space-time continuum itself—derives its function, its meaning, its very existence entirely—even if in some contexts indirectly—from the apparatus-elicited answers to yes-or-no questions, binary choices, bits. 'It from bit' symbolizes the idea that every item of the physical world has at bottom—a very deep bottom, in most instances—an immaterial source and explanation; that which we call reality arises in the last analysis from the posing of yes–no questions and the registering of equipment-evoked responses; in short, that all things physical are information-theoretic in origin and that this is a participatory universe.]]
+      #### .citation[John Archibald Wheeler]
+
+      ???
+      Everything derives from binary yes or no answers
+
+      ---
+      class: middle
+
+      # .pink[Discovery:]
+      # Diversity of spatio-temporal behaviour where system organizes *itself* into patterns
+
+      .citation[James E. Hanson, James P. Crutchfield, _Computational Mechanics of Cellular Automata: an Example_]
+
+      ---
+      background-image: url(./src/images/space.jpg)
+      background-size: cover
+
+      class: center, middle
+
+      # .big-one[.pink[Complex Systems]]
+
+      ???
+      The automata produced is more complex than itself, which is why it's so interesting to people. But what is complexity?
+
+      ---
+      class: middle
+
+      # 1. .pink[How hard is it to describe?]
+      # 2. .pink[How hard is it to create?]
+      # 3. .pink[What is its degree of organization?]
+
+      .citation[defined by Seth Lloyd, more infor: https://www.youtube.com/watch?v=XBB_lOfsqQA]
+      ???
+      Questions defined by Seth Lloyd
+
+      ---
+      class: middle, center
+
+      background-image: url(./src/images/space.jpg)
+      background-size: cover
+
+      # .pink[The average information content or "amount of surprise"]
+
+      .citation[Melanie Mitchell, _Complexity: A Guided Tour_]
+      ---
+      class: middle, center
+
+      background-image: url(./src/images/space.jpg)
+      background-size: cover
+      # .pink[Algorithmic information content]
+
+      .citation[Melanie Mitchell, _Complexity: A Guided Tour_]
+
+      ???
+      Algorithmic information content: the size of the shortest program that could generate complete description
+
+      ---
+      background-image: url(./src/images/space.jpg)
+      background-size: cover
+
+      class: center, middle
+
+      # .big-one[.pink[Genetic Algorithms + <br/> Cellular Automata]]
+
+      ???
+      because such a simple system produces and models are more complex result, people have been looking at these as models to work on
+      ---
+      class: middle
+
+      #1. .pink[Density Classification]
+      #2. .pink[Synchronization Tasks]
+      #3. .pink[Random Number Generations]
+
+      .citation[Mitchell, Crutchfield, Das, _Evolving Cellular Automata with Genetic Algorithms: A Review of Recent Work_]
+
+      ---
+      background-image: url(./src/images/space.jpg)
+      background-size: cover
+      class: center, middle
+
+      # .pink[Genetic Algorithm Structure for Density Classification]
+
+      ---
+      class: top
+
+      # .pink[A new set is generated for each generation]
+
+      ### ![turtle](./src/images/turtleSmall.png)&nbsp![koala](./src/images/koalaSmall.png)&nbsp&nbsp![koala](./src/images/koalaSmall.png)&nbsp&nbsp![turtle](./src/images/turtleSmall.png)&nbsp![turtle](./src/images/turtleSmall.png)![koala](./src/images/koalaSmall.png)&nbsp![koala](./src/images/koalaSmall.png)&nbsp&nbsp![turtle](./src/images/turtleSmall.png)&nbsp![turtle](./src/images/turtleSmall.png)![koala](./src/images/koalaSmall.png)
+
+      .citation[Mitchell, Crutchfield, Das, _Evolving Cellular Automata with Genetic Algorithms: A Review of Recent Work_]
+      ---
+      class: middle
+      # .pink[Perform a fitness level test ![runner](./src/images/runner.png)&nbsp ![bike](./src/images/bike.png)&nbsp![weightlifter](./src/images/weightlifter.png) + ]
+      # .pink[sort in order of fitness]
+
+      .citation[Mitchell, Crutchfield, Das, _Evolving Cellular Automata with Genetic Algorithms: A Review of Recent Work_]
+      ---
+      class: middle
+      # .pink[20% of the best taken to next generation]
+      ### ![turtle](./src/images/turtleSmall.png)&nbsp![koala](./src/images/koalaSmall.png)&nbsp&nbsp![koala](./src/images/koalaSmall.png)&nbsp&nbsp![turtle](./src/images/turtleSmall.png)&nbsp![turtle](./src/images/turtleSmall.png)![koala](./src/images/koalaSmall.png)&nbsp![koala](./src/images/koalaSmall.png)&nbsp&nbsp![turtle](./src/images/turtleSmall.png)&nbsp![turtle](./src/images/turtleSmall.png)![koala](./src/images/koalaSmall.png)
+      ## | ------- |
+      #### &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 20%
+
+      .citation[Mitchell, Crutchfield, Das, _Evolving Cellular Automata with Genetic Algorithms: A Review of Recent Work_]
+
+      ---
+      class: middle
+      # .pink[80% crossovers between pairs of "elite" rules]
+
+      ### ![turtle](./src/images/turtleSmall.png)&nbsp![koala](./src/images/koalaSmall.png)&nbsp&nbsp![koala](./src/images/koalaSmall.png)&nbsp&nbsp![turtle](./src/images/turtleSmall.png)&nbsp![turtle](./src/images/turtleSmall.png)![koala](./src/images/koalaSmall.png)&nbsp![koala](./src/images/koalaSmall.png)&nbsp&nbsp![turtle](./src/images/turtleSmall.png)&nbsp![turtle](./src/images/turtleSmall.png)![koala](./src/images/koalaSmall.png)
+      #### &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp |----------------------------------------------------------------------------------------- |
+      .citation[Mitchell, Crutchfield, Das, _Evolving Cellular Automata with Genetic Algorithms: A Review of Recent Work_]
+
+      ???
+      Offsprings from the crossover are placed randomly
+      Selecting parents relative to fitness rank helps with genetic diversity.
+
+      ---
+      # .pink[Generation 0]
+      ![gen0](./src/images/gen0.png)
+
+      .citation[Mitchell, Crutchfield, Das, _Evolving Cellular Automata with Genetic Algorithms: A Review of Recent Work_]
+
+      ---
+      # .pink[Later Generations]
+      ![latergens](./src/images/laterGens.png)
+
+      .citation[Mitchell, Crutchfield, Das, _Evolving Cellular Automata with Genetic Algorithms: A Review of Recent Work_]
+
+      ---
+      background-image: url(./src/images/space.jpg)
+      background-size: cover
+
+      class: center, middle
+
+      # .pink[Image Processing]
+
+      ---
+      class: center, middle
+
+      ######![turtle](./src/images/turtle.png)&nbsp&nbsp&nbsp![turtle](./src/images/turtle.png)&nbsp&nbsp&nbsp![turtle](./src/images/turtle.png)
+      ######![turtle](./src/images/turtle.png)&nbsp&nbsp&nbsp![koala](./src/images/koala.png)&nbsp&nbsp&nbsp![turtle](./src/images/turtle.png)
+      ######![turtle](./src/images/turtle.png)&nbsp&nbsp&nbsp![turtle](./src/images/turtle.png)&nbsp&nbsp&nbsp![turtle](./src/images/turtle.png)
+
+      .citation[P. Sahota. M. F. Daemi and D. G. Elliman, _training genetically evolving cellular automata for image processing_]
+      ---
+      class: middle
+
+      ```javascript
+        // automata
+        [
+          // lattice
+          [
+            // cells
+            {
+              state: true,
+              northEast: false,
+              north: false,
+              northWest: false,
+              west: true,
+              southWest: true,
+              south: false,
+              southEast: true,
+              east: false
+            }, ...], ... ]
+      ```
+
+      .citation[P. Sahota. M. F. Daemi and D. G. Elliman, _training genetically evolving cellular automata for image processing_]
+      ---
+      class: center, middle
+
+      .big-one[&ltri; --> ] ![automata](./src/images/automata.png) .big-one[--> &ltri;]
+      # .pink[input &nbsp&nbsp&nbsp&nbsp&nbsp --> automata --> &nbsp&nbsp&nbsp&nbsp&nbsp output]
+
+      .citation[P. Sahota. M. F. Daemi and D. G. Elliman, _training genetically evolving cellular automata for image processing_]
+      ---
+
+      # .pink[Resources]
+
+      ##### .pink[Melanie Mitchell, _Complexity: A Guided Tour_]
+      ##### .pink[John Von Neumann, _Theory of Self-Reproducing Automata, http://cba.mit.edu/events/03.11.ASE/docs/VonNeumann.pdf_]
+      ##### .pink[Stephen Wolfram, _Computational Theory of Cellular Automata _]
+      ##### .pink[Mitchell, Crutchfield, Das, _Evolving Cellular Automata with Genetic Algorithms: A Review of Recent Work_]
+      ##### .pink[P. Sahota. M. F. Daemi and D. G. Elliman, _training genetically evolving cellular automata for image processing_]
+
+      ---
+      background-image: url(./src/images/space.jpg)
+      background-size: cover
+
+      class: center, middle
+
+      # .big-one[.pink[Thank you ![sparkles](./src/images/sparkles.png)]]
+      ## .pink[[@_lrlna](https://twitter.com/_lrlna)]
+      ## .pink[lrlna.github.io/braziljs-2016]
+
+
+    </textarea>
+
+    <script src="./src/remark.js"></script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+  </html>
