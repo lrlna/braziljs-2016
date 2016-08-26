@@ -1,6 +1,6 @@
 # Taking on Genetically Evolving Cellular Automta with JavaScript
 
-Upcoming [ScotlandJS](https://scotlandjs.com/) Talk on Cellular Automata :dancer: 
+Upcoming [BrazilJS](https://braziljs.org/conf) Talk on Cellular Automata :dancer: 
 
 ---
 
@@ -15,4 +15,6 @@ Upcoming [ScotlandJS](https://scotlandjs.com/) Talk on Cellular Automata :dancer
 
 ## About Irina:
 
-Irina is a software developer based in Vancouver, Canada. She is a javascript and node enthusiast. Aside from enthusiasting over javascript, she is a regular hiker out in the Rocky mountains, and a code mentor around Vancouver.
+tl;dr javascript, wombats and hot takes.
+
+The not so short: Irina is a London via Vancouver software developer. She spends quite a bit of her time exploring the outdoors, gushing over trains, and reading some Beatniks.
